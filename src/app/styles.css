@@ -86,3 +86,8 @@ button {
 .censored {
   filter: blur(4px);
 }
+
+.hit-counter {
+  display: flex;
+  flex-direction: row;
+}
