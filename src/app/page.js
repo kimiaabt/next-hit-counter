@@ -2,6 +2,7 @@ import React from "react";
 
 import { readFile, writeFile } from "../helpers/file-helpers";
 import HitCounter from "../components/HitCounter";
+import Censored from "../components/Censored/Censored";
 
 const DATABASE_PATH = "/src/database.json";
 
@@ -14,7 +15,10 @@ function Home() {
   return (
     <main>
       <h1>Welcome!</h1>
-      <HitCounter hits={hits} />
+      You are visitor number:{" "}
+      <Censored>
+        <HitCounter />
+      </Censored>
     </main>
   );
 }
